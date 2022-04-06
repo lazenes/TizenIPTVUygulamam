@@ -1,0 +1,196 @@
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-grow: 1;
+  -webkit-flex-grow: 1;
+overflow: hidden;
+  height: 100%;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* Elements */
+
+  .header {
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    -webkit-align-items: center;
+    height: 15%;
+    min-height: 15%;
+    background: #000;
+    border-bottom: 2px solid #d80a41;
+    box-sizing: border-box;
+  }
+
+  .header h1 {
+    margin: 0 32px;
+    color: #fff;
+    font-size: 4em;
+    text-align: center;
+  }
+
+  .mac,
+  .kanalno,
+  .build {
+    font-size: 2em;
+    color: #333;
+  }
+
+  .mac {
+    margin-right: 32px;
+  }
+
+  .mac:before {
+    content: 'MAC: ';
+  }
+
+  .build {
+    flex-grow: 1;
+    -webkit-flex-grow: 1;
+  }
+
+  .section {
+    flex-grow: 1;
+    -webkit-flex-grow: 1;
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    background: #000;
+  }
+
+  .sidebar {
+    width: 25%;
+    min-width: 25%;
+    background: #000;
+    border-right: 2px solid #d80a41;
+    box-sizing: border-box;
+    overflow: auto;
+  }
+
+  .screen {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-grow: 1;
+    -webkit-flex-grow: 1;
+    background: #000;
+  }
+
+/* Screen Info */
+
+  .info {
+    position: absolute;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    -webkit-align-items: center;
+    width: calc(100% - 25%);
+    height: calc(100% - 15%);
+    z-index: 1;
+  }
+
+  #message {
+    width: 100%;
+    padding: 32px;
+    color: #fff;
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.9);
+  }
+
+  #message.hide {
+    display: none;
+  }
+
+/* Player */
+
+  #av-player {
+    flex-grow: 1;
+    -webkit-flex-grow: 1;
+    background: #000;
+    z-index: 0;
+  }
+
+  #av-player.fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    z-index: 7;
+  }
+
+
+/* Channel list */
+
+  #channel-list {
+    color: #fff;
+    font-size: 1.6em;
+  }
+
+  #channel-list:empty:after {
+    display: block;
+    padding-top: 100%;
+    color: #3080ba;
+    font-weight: bold;
+    text-align: center;
+    content: 'Liste Yükleniyor...';
+  }
+
+  #channel-list li {
+    padding: 12px;
+    transition: all .8s;
+  }
+  
+  #channel-list li.playing {
+    font-weight: bold;
+    background: #d80a41;
+  }
+
+  #channel-list li.selected {
+    background: #3080ba;
+    transition: all .3s;
+  }
+
+/* Dev */
+
+  #log {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    height: 240px;
+    color: #02f902;
+    font-family: monospace;
+    background: rgba(0, 0, 0, 0.9);
+    box-sizing: border-box;
+    overflow: auto;
+    z-index: 8;
+  }
+
+  #log.hide {
+    display: none;
+  }
+
+  #log p {
+    margin: 0;
+    padding: 0;
+  }
+

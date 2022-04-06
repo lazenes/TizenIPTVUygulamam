@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:tizen="http://tizen.org/ns/widgets" id="http://musteri.tilmaxtech.com/xiptv/" version="1.0.0" viewmodes="fullscreen">
+    <tizen:application id="SjM6H1ql1W.XIPTV" package="SjM6H1ql1W" required_version="2.3"/>
+    <author href="https://indark.icu" email="lazenes@gmail.com">lazenes</author>
+    <content src="index.html"/>
+    <feature name="http://tizen.org/feature/screen.size.normal.1080.1920"/>
+    <icon src="icon.png"/>
+    <name>XIPTV</name>
+    <tizen:privilege name="http://developer.samsung.com/privilege/contentsdownload"/>
+    <tizen:privilege name="http://developer.samsung.com/privilege/network.public"/>
+        <tizen:privilege name="http://tizen.org/privilege/tv.inputdevice"/>
+        <tizen:privilege name="http://tizen.org/privilege/system"/>
+<tizen:privilege name="http://tizen.org/privilege/telephony"/>
+ <tizen:privilege name="http://developer.samsung.com/privilege/avplay"/>
+    <tizen:privilege name="http://developer.samsung.com/privilege/productinfo"/>
+    <tizen:privilege name="http://tizen.org/privilege/tv.inputdevice"/>
+   <access origin="*" subdomains="true"></access>
+<tizen:privilege name="http://tizen.org/privilege/internet"/>
+<tizen:privilege name = "http://tizen.org/privilege/application.launch" />   
+<tizen:privilege name = "http://tizen.org/privilege/network.connection" /> 
+    
+    <tizen:profile name="tv-samsung"/>
+    <tizen:setting screen-orientation="landscape" context-menu="enable" background-support="enable" encryption="disable" install-location="auto" hwkey-event="enable"/>
+
+</widget>
